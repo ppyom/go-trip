@@ -2,9 +2,14 @@
   display: flex;
   border: 2px solid var(--gray-300);
   background-color: var(--gray-500);
-  padding: 1rem;
   border-radius: 0.5rem;
   margin-bottom: 0.5rem;
+}
+.Item:hover {
+  background-color: var(--gray-700);
+}
+.Item > * {
+  padding: 1rem;
 }
 .Item p {
   flex: 1;
@@ -17,5 +22,6 @@
   cursor: pointer;
 }
 .Item button:hover {
+  color: var(--gray-100);
   rotate: 45deg;
 }

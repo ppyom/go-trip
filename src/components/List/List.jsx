@@ -1,4 +1,5 @@
 import Item from './Item/Item.jsx';
+import './List.css';
 
 const List = ({ list, remove }) => {
   return (
