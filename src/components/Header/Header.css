@@ -3,7 +3,6 @@
   text-align: center;
   padding: 4rem 0;
 }
-
 .Header .logo {
   font-size: 2rem;
   font-weight: bold;
@@ -11,6 +10,8 @@
 }
 .Header .logo i {
   color: var(--color-secondary-dark);
+  rotate: -45deg;
+  translate: 0 3px;
 }
 .Header .logo .point {
   color: var(--color-primary);
