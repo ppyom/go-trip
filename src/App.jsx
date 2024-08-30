@@ -23,19 +23,19 @@ function App() {
       <Header />
       <Input add={addList} />
       <TotalCount count={list.length} />
-      <ul className="List mw">
-        {list.length === 0 ? (
-          <Empty />
-        ) : (
-          list.map((item, idx) => (
+      {list.length === 0 ? (
+        <Empty name="여행지" />
+      ) : (
+        <ul className="List mw">
+          {list.map((item, idx) => (
             <Item
               key={`item_${idx}`}
               item={item}
               remove={() => deleteList(item.id)}
             />
-          ))
-        )}
-      </ul>
+          ))}
+        </ul>
+      )}
     </>
   );
 }
