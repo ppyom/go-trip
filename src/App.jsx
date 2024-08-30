@@ -5,7 +5,6 @@ import TotalCount from './components/TotalCount/TotalCount.jsx';
 import Item from './components/Item/Item.jsx';
 import Empty from './components/Empty/Empty.jsx';
 import * as PlaceStorage from './storages/placeStorage.js';
-import './App.css';
 
 function App() {
   const [list, setList] = useState(PlaceStorage.getList());
