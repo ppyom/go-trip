@@ -4,16 +4,35 @@ import TotalCount from './components/TotalCount/TotalCount.jsx';
 import Item from './components/Item/Item.jsx';
 import Empty from './components/Empty/Empty.jsx';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [list, setList] = useState([]);
+
+  const addList = (newItem) => {
+    setList((prev) => [...prev, newItem]);
+  };
+  const deleteList = (id) => {
+    setList((prev) => prev.filter((item) => item.id !== id));
+  };
+
   return (
     <>
       <Header />
-      <Input />
-      <TotalCount />
+      <Input add={addList} />
+      <TotalCount count={list.length} />
       <ul className="List mw">
-        <Item />
-        <Empty />
+        {list.length === 0 ? (
+          <Empty />
+        ) : (
+          list.map((item, idx) => (
+            <Item
+              key={`item_${idx}`}
+              item={item}
+              remove={() => deleteList(item.id)}
+            />
+          ))
+        )}
       </ul>
     </>
   );

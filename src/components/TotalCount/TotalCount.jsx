@@ -1,10 +1,10 @@
 import './TotalCount.css';
 
-const TotalCount = () => {
+const TotalCount = ({ count }) => {
   return (
     <div className="TotalCount mw">
       <p>
-        Total <span className="count">0</span>
+        Total <span className="count">{count}</span>
       </p>
     </div>
   );
