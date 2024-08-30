@@ -3,6 +3,7 @@ import './Input.css';
 
 const Input = ({ add }) => {
   const [text, setText] = useState('');
+
   const addToList = () => {
     const resultText = text.trim();
     if (resultText === '') {
@@ -11,6 +12,7 @@ const Input = ({ add }) => {
     add({ id: Date.now().toString(), title: resultText });
     setText('');
   };
+
   return (
     <div className="Input mw">
       <input
