@@ -1,0 +1,20 @@
+.Item {
+  display: flex;
+  border: 2px solid var(--gray-300);
+  background-color: var(--gray-500);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.Item p {
+  flex: 1;
+}
+.Item button {
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  color: var(--gray-300);
+  cursor: pointer;
+}
+.Item button:hover {
+  rotate: 45deg;
+}

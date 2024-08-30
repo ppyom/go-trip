@@ -1,0 +1,9 @@
+.Empty {
+  text-align: center;
+  padding: 4rem 0;
+  color: var(--gray-300);
+}
+.Empty i {
+  font-size: 8rem;
+  margin-bottom: 2rem;
+}
