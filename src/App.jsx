@@ -2,8 +2,8 @@ import { useState } from 'react';
 import Header from './components/Header/Header.jsx';
 import Input from './components/Input/Input.jsx';
 import TotalCount from './components/TotalCount/TotalCount.jsx';
-import Item from './components/Item/Item.jsx';
-import Empty from './components/Empty/Empty.jsx';
+import List from './components/List/List.jsx';
+import Empty from './components/List/Empty/Empty.jsx';
 import * as PlaceStorage from './storages/placeStorage.js';
 
 function App() {
@@ -26,15 +26,7 @@ function App() {
       {list.length === 0 ? (
         <Empty name="여행지" />
       ) : (
-        <ul className="List mw">
-          {list.map((item, idx) => (
-            <Item
-              key={`item_${idx}`}
-              item={item}
-              remove={() => deleteList(item.id)}
-            />
-          ))}
-        </ul>
+        <List list={list} remove={deleteList} />
       )}
     </>
   );
