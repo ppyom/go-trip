@@ -1,0 +1,15 @@
+:root {
+  --color-primary: #4ea8de;
+  --color-primary-dark: #1e6f9f;
+  --color-secondary: #8284fa;
+  --color-secondary-dark: #5e60ce;
+  --gray-100: #f2f2f2;
+  --gray-300: #808080;
+  --gray-500: #262626;
+  --gray-700: #0d0d0d;
+}
+
+body {
+  background-color: var(--gray-500);
+  color: var(--gray-100);
+}

@@ -1,0 +1,17 @@
+.Header {
+  background-color: var(--gray-700);
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.Header .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-primary-dark);
+}
+.Header .logo i {
+  color: var(--color-secondary-dark);
+}
+.Header .logo .point {
+  color: var(--color-primary);
+}
