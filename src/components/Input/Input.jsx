@@ -22,9 +22,7 @@ const Input = ({ add }) => {
         onChange={({ target }) => setText(target.value)}
         onKeyUp={(event) => event.key === 'Enter' && addToList()}
       />
-      <button onClick={addToList}>
-        Add <i className="fa-solid fa-circle-plus" />
-      </button>
+      <button onClick={addToList}>Add</button>
     </div>
   );
 };
