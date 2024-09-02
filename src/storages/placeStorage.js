@@ -1,23 +1,26 @@
-const STORAGE_KEY = 'go-trip-place';
-const DEFAULT_VALUE = '{}';
+class PlaceStorage {
+  static #DEFAULT_VALUE = '{}';
+  static #STORAGE_KEY = 'go-trip-place';
+  static #placeList = this.#getByLocalStorage();
+  static #getByLocalStorage() {
+    return JSON.parse(
+      localStorage.getItem(this.#STORAGE_KEY) || this.#DEFAULT_VALUE,
+    );
+  }
+  static #saveToLocalStorage() {
+    localStorage.setItem(this.#STORAGE_KEY, JSON.stringify(this.#placeList));
+  }
+  static getList() {
+    return Object.values(this.#placeList);
+  }
+  static create(item) {
+    this.#placeList[item.id] = item;
+    this.#saveToLocalStorage();
+  }
+  static remove(id) {
+    delete this.#placeList[id];
+    this.#saveToLocalStorage();
+  }
+}
 
-const getByLocalStorage = () =>
-  JSON.parse(localStorage.getItem(STORAGE_KEY) || DEFAULT_VALUE);
-const saveToLocalStorage = () =>
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(placeList));
-
-const placeList = getByLocalStorage();
-
-const getList = () => {
-  return Object.values(placeList);
-};
-const create = (item) => {
-  placeList[item.id] = item;
-  saveToLocalStorage();
-};
-const remove = (id) => {
-  delete placeList[id];
-  saveToLocalStorage();
-};
-
-export { getList, create, remove };
+export default PlaceStorage;

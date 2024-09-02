@@ -4,7 +4,7 @@ import Input from './components/Input/Input.jsx';
 import TotalCount from './components/TotalCount/TotalCount.jsx';
 import List from './components/List/List.jsx';
 import Empty from './components/List/Empty/Empty.jsx';
-import * as PlaceStorage from './storages/placeStorage.js';
+import PlaceStorage from './storages/placeStorage.js';
 
 function App() {
   const [list, setList] = useState(PlaceStorage.getList());
